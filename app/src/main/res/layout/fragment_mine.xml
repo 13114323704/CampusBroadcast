@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/bg_view"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#ffffff"/>
+        <RelativeLayout
+            android:id="@+id/user_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/bg_view"
+            android:background="@drawable/divider_line_bottom">
+
+            <com.hq.testtldemo.utils.CircleImageView
+                android:id="@+id/user_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@mipmap/image_user"
+                app:border_color="#FF0000"
+                app:border_width="2dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/user_image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="一枚校播豆子"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_nickname"
+                    android:layout_toLeftOf="@+id/user_qrcode_image"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:text="快乐学习，开心校播"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/user_qrcode_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/qrcode" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/user_nickname"
+                    android:text="LV17"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/level_bg"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/user_info_layout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/divider_line_bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_broadcast"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+                    android:background="@drawable/divider_line_right"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.8"
+                        android:padding="2dp"
+                        android:src="@mipmap/image_broadcast"/>
+                    <TextView
+                        android:id="@+id/textView_private_experience"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top|center_horizontal"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="我要开播" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_take"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.8"
+                        android:padding="8dp"
+                        android:src="@mipmap/image_take"/>
+                    <TextView
+                        android:id="@+id/textView_private_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top|center_horizontal"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="我的订阅" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_task"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_line_right"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.8"
+                        android:padding="5dp"
+                        android:src="@mipmap/image_task"/>
+                    <TextView
+                        android:id="@+id/textView_protect"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top|center_horizontal"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="任务中心" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_track"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.8"
+                        android:padding="7dp"
+                        android:src="@mipmap/image_track"/>
+                    <TextView
+                        android:id="@+id/textView_family_way"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="top|center_horizontal"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:text="我的足迹" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/center_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/more_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/order_label_layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="更多"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_collect"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/divider_line_bottom">
+
+                <ImageView
+                    android:id="@+id/collect_label"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/image_collect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/collect_label"
+                    android:text="我的收藏"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/more" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_history_played"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/divider_line_bottom">
+
+                <ImageView
+                    android:id="@+id/played_label"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/image_record" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/played_label"
+                    android:text="我的开播记录"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/more" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/relative_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/order_label_layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="关于"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_advice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/divider_line_bottom">
+
+                <ImageView
+                    android:id="@+id/advice_label"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/help_and_advice" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/advice_label"
+                    android:text="帮助和反馈"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/more" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_about"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/divider_line_bottom">
+
+                <ImageView
+                    android:id="@+id/info_label"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/info_label"
+                    android:text="关于校播"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/more" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

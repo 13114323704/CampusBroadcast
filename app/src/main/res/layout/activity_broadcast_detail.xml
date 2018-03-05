@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
+
+            <RelativeLayout
+                android:id="@+id/relative_top"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@mipmap/broadcast_detail_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="20dp"
+                    android:text="音乐交流"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:onClick="exit"
+                    android:padding="10dp"
+                    android:src="@mipmap/image_exit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="20dp"
+                    android:text="1001"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="20dp"
+                    android:text="音乐"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/detailinfo_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/detailinfo_layout1"
+                        android:background="@drawable/divider_line_bottom">
+
+                        <ImageView
+                            android:id="@+id/online_person_label"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:src="@mipmap/online_label" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/online_person_label"
+                            android:text="正在收听"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/label_more"
+                            android:gravity="center|right"
+                            android:text="102人" />
+
+                        <ImageView
+                            android:id="@+id/label_more"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@mipmap/more" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/detailinfo_layout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/detailinfo_layout2"
+                        android:background="@drawable/divider_line_bottom"
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <com.hq.testtldemo.utils.CircleImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/head1"
+                            app:border_color="#ffffff"
+                            app:border_width="0dp" />
+
+                        <com.hq.testtldemo.utils.CircleImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/head2"
+                            app:border_color="#ffffff"
+                            app:border_width="0dp" />
+
+                        <com.hq.testtldemo.utils.CircleImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/head3"
+                            app:border_color="#ffffff"
+                            app:border_width="0dp" />
+
+                        <com.hq.testtldemo.utils.CircleImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/head4"
+                            app:border_color="#ffffff"
+                            app:border_width="0dp" />
+
+                        <com.hq.testtldemo.utils.CircleImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/head5"
+                            app:border_color="#ffffff"
+                            app:border_width="0dp" />
+
+                        <com.hq.testtldemo.utils.CircleImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/head6"
+                            app:border_color="#ffffff"
+                            app:border_width="0dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"
+                            android:text="----交流区----"
+                            android:textSize="15sp" />
+
+                        <include layout="@layout/message_p1_layout" />
+
+                        <include layout="@layout/message_p2_layout" />
+
+                        <include layout="@layout/message_p3_layout" />
+
+                        <include layout="@layout/message_p4_layout" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:padding="5dp"
+                                android:src="@mipmap/setting" />
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginTop="30dp"
+                                android:padding="5dp"
+                                android:src="@mipmap/record_sound" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:src="@mipmap/microphone" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:src="@mipmap/level_6" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_send_bg"
+            android:hint="快来和小伙伴们一起吐槽吧！"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_send_bg"
+            android:textSize="17sp"
+            android:text="发送" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baoyz.widget.PullRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pullRefreshLayout_area1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:refreshType="material">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="----正在广播----"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/playing_label"/>
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/channel_playing1"
+                layout="@layout/channel_main_playing1"/>
+
+            <include
+                android:id="@+id/channel_playing2"
+                layout="@layout/channel_main_playing2"/>
+
+            <include
+                android:id="@+id/channel_playing3"
+                layout="@layout/channel_main_playing3"/>
+
+            <include
+                android:id="@+id/channel_playing4"
+                layout="@layout/channel_main_playing4"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="----历史记录----"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/history_label"/>
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/channel_history1"
+                layout="@layout/channel_main_history2"/>
+
+            <include
+                android:id="@+id/channel_history2"
+                layout="@layout/channel_main_history3"/>
+
+            <include
+                android:id="@+id/channel_history3"
+                layout="@layout/channel_main_history1"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+</com.baoyz.widget.PullRefreshLayout>

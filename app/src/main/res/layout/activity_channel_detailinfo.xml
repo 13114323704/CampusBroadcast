@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:onClick="image_back"
+            android:padding="10dp"
+            android:src="@mipmap/back_black" />
+
+        <Button
+            android:id="@+id/title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:text="广播详情"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/title_layout_top_divider" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00BFFF"
+        android:onClick="toListen"
+        android:text="点击进入频道收听"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/detailinfo_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:src="@mipmap/channel_label_pink" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="1001"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/btn_take"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:onClick="take"
+                            android:background="@drawable/btn_love_bg"
+                            android:text="订阅" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="官方音乐广播"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="开播时间段：7:00-8:30"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/detailinfo_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/detailinfo_layout1"
+                android:background="@drawable/divider_line_bottom">
+
+                <ImageView
+                    android:id="@+id/online_person_label"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@mipmap/online_label" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/online_person_label"
+                    android:text="在线人数"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/label_more"
+                    android:gravity="center|right"
+                    android:text="102人" />
+
+                <ImageView
+                    android:id="@+id/label_more"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/more" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/detailinfo_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/detailinfo_layout2"
+                android:background="@drawable/divider_line_bottom"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <com.hq.testtldemo.utils.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/head1"
+                    app:border_color="#ffffff"
+                    app:border_width="0dp" />
+
+                <com.hq.testtldemo.utils.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/head2"
+                    app:border_color="#ffffff"
+                    app:border_width="0dp" />
+
+                <com.hq.testtldemo.utils.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/head3"
+                    app:border_color="#ffffff"
+                    app:border_width="0dp" />
+
+                <com.hq.testtldemo.utils.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/head4"
+                    app:border_color="#ffffff"
+                    app:border_width="0dp" />
+
+                <com.hq.testtldemo.utils.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/head5"
+                    app:border_color="#ffffff"
+                    app:border_width="0dp" />
+
+                <com.hq.testtldemo.utils.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/head6"
+                    app:border_color="#ffffff"
+                    app:border_width="0dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/detailinfo_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/detailinfo_layout3"
+                android:background="@drawable/divider_line_bottom">
+
+                <ImageView
+                    android:id="@+id/history_record_label"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/history_record_label" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/history_record_label"
+                    android:text="历史记录"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/history_label_more"
+                    android:gravity="center|right"
+                    android:text="51条" />
+
+                <ImageView
+                    android:id="@+id/history_label_more"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/more" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/comment_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/detailinfo_layout4"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13sp"
+                android:text="交流区" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/comment_label"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/comment_layout_first"
+                    layout="@layout/evaluate_layout_first" />
+
+                <include
+                    android:id="@+id/comment_layout_second"
+                    layout="@layout/evaluate_layout_second" />
+
+                <include
+                    android:id="@+id/comment_layout_third"
+                    layout="@layout/evaluate_layout_third" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="亲！没有更多啦！"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
